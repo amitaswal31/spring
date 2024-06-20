@@ -1,7 +1,18 @@
 package beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Owner {
-    private Cat cat;
+    @Autowired
+    @Qualifier("1")
+    private  Cat cat;
+
+//    public Owner(Cat cat){
+//        this.cat = cat;
+//    }
 
     public Cat getCat() {
         return cat;
